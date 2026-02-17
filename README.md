@@ -54,5 +54,6 @@ To launch the interactive Streamlit dashboard for visual exploration:
 ```bash
 streamlit run dashboard.py
 ```
+---
 
-Submitted by Kunal Somani for Primetrade.ai Internship
+## Submitted by Kunal Somani for Primetrade.ai Internship
