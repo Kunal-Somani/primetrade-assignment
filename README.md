@@ -46,7 +46,7 @@ pip install -r requirements.txt
 ### 2. Run the Analysis
 To execute the data processing pipeline, perform trader clustering, and train the predictive model:
 ```bash
-python src/modeling.py
+streamlit run src/dashboard.py
 ```
 
 ### 3. Launch Dashboard
