@@ -28,7 +28,7 @@ This project analyzes how **Market Sentiment (Fear vs. Greed)** impacts trader p
 ##Project Structure
 * `notebooks/01_analysis.ipynb`: Detailed EDA, Data Cleaning, and Visualizations (Part A & B).
 * `src/modeling.py`: Automated pipeline for Merging, Clustering, and Training the Predictive Model.
-* `dashboard.py`: Interactive Streamlit App for exploring the data.
+* `src/dashboard.py`: Interactive Streamlit App for exploring the data.
 * `data/`: Contains raw CSVs (ignored by git) and processed data.
 
 ---
