@@ -5,23 +5,23 @@ This project analyzes how **Market Sentiment (Fear vs. Greed)** impacts trader p
 
 ![Dashboard Preview](dashboard_preview.png)
 
-## Key Insights (Part C)
+## Summary & Strategy (Part C)
 
-### 1. Market Sentiment & Performance
-* **"Extreme Greed" Volatility:** Our analysis shows that while "Extreme Greed" days have the highest average win rates (~40%), they also exhibit the widest variance in PnL.
-* **The "Neutral" Trap:** Traders perform worst during "Neutral" sentiment, likely due to a lack of clear market direction.
+### 1. Methodology
+* **Data Integration:** Processed 167,000+ trade records, normalizing timestamps to a daily level to align with Bitcoin Fear & Greed index values.
+* **Cleaning & Preprocessing:** Handled missing values and duplicates to ensure statistical integrity across a dataset spanning multiple market cycles.
+* **Feature Engineering:** Calculated key metrics including daily PnL, win rates, and average trade sizes to serve as inputs for behavioral analysis.
+* **Modeling:** Utilized **K-Means Clustering** for archetype discovery and a **Random Forest Classifier** to predict trade profitability based on sentiment and behavior.
 
-### 2. Trader Archetypes (Clustering Results)
-Using K-Means clustering, we identified 3 distinct behaviors:
-* **Cluster 0 (Retail Scalpers):** High frequency, small position sizes (~$5k), taking quick profits.
-* **Cluster 1 (The Snipers):** Best performers with **$1.9M total PnL**. They trade less often but with high conviction.
-* **Cluster 2 (Whales):** Largest average position sizes (~$17.5k).
+### 2. Key Insights
+* **The "Extreme Greed" Volatility:** While win rates peak at ~41% during Extreme Greed, these days also exhibit the widest variance in PnL, indicating high-risk, emotional trading.
+* **The "Neutral" Trap:** Performance is consistently lowest during Neutral sentiment, suggesting that a lack of clear market momentum leads to directionless, unprofitable trading for retail participants.
+* **Trader Archetypes:** Identified "Snipers" as the most successful segment—trading with lower frequency but higher conviction and generating **$1.9M in total PnL**.
 
-### 3. Predictive Modeling (Bonus)
-We built a Random Forest Classifier to predict profitable trades.
-* **Accuracy:** **72.15%**
-* **Precision (Predicting Losses):** **76%**
-* **Utility:** This model can be used as a risk-filter to prevent trades during unfavorable sentiment conditions.
+### 3. Strategy Recommendations
+* **Sentiment-Based Risk Filtering:** Traders should reduce leverage by 30-50% during "Extreme Greed" phases to protect against the observed high-variance price swings.
+* **Defensive Neutral Stance:** During "Neutral" days, the strategy should pivot to tighter stop-losses or reduced trade frequency, as these conditions correlate with the highest probability of inconsistent "wash" trading.
+* **The Sniper Filter:** Use the predictive model (72% accuracy) as an automated "entry-check"—only taking trades when both sentiment and behavioral clusters align with high-probability outcomes.
 
 ---
 
