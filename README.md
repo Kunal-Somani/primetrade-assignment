@@ -35,9 +35,24 @@ We built a Random Forest Classifier to predict profitable trades.
 
 ## Setup & Usage
 
-### 1. Installation
+### 1. Installation 
 Clone the repository and install dependencies:
 ```bash
 git clone [https://github.com/Kunal-Somani/primetrade-assignment.git](https://github.com/Kunal-Somani/primetrade-assignment.git)
 cd primetrade-assignment
 pip install -r requirements.txt
+```
+
+### 2. Run the Analysis
+To execute the data processing pipeline, perform trader clustering, and train the predictive model:
+```bash
+python src/modeling.py
+```
+
+### 3. Launch Dashboard
+To launch the interactive Streamlit dashboard for visual exploration:
+```bash
+streamlit run dashboard.py
+```
+
+Submitted by Kunal Somani for Primetrade.ai Internship
